@@ -13,9 +13,9 @@ function Header() {
     if (user) {
       auth.signOut();
     } else {
-      history.push('/login');
+      history.push("/login");
     }
-  }
+  };
   return (
     <div className="header">
       <Link to="/">
@@ -31,19 +31,22 @@ function Header() {
         <SearchIcon className="header__searchIcon" />
       </div>
       <div className="header__nav">
-        
-          <div onClick={handleAuthentication} className="header__navOption">
-            <span className="header__navOptionOne">Hello {user?.email} </span>
-            <span className="header__navOptionTwo">
-              {user ? "Sign Out" : "Sign In"}
-            </span>
-          </div>
-       
-
-        <div className="header__navOption">
-          <span className="header__navOptionOne">Return</span>
-          <span className="header__navOptionTwo"> & Orders</span>
+        <div onClick={handleAuthentication} className="header__navOption">
+          <span className="header__navOptionOne">
+            Hello {!user ? "Guest" : user?.email}{" "}
+          </span>
+          <span className="header__navOptionTwo">
+            {user ? "Sign Out" : "Sign In"}
+          </span>
         </div>
+
+        <Link to="/orders">
+          <div className="header__navOption">
+            <span className="header__navOptionOne">Return</span>
+            <span className="header__navOptionTwo"> & Orders</span>
+          </div>
+        </Link>
+
         <div className="header__navOption">
           <span className="header__navOptionOne">Your </span>
           <span className="header__navOptionTwo">Prime</span>
