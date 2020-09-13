@@ -15,7 +15,7 @@ function Payment() {
   const [error, setError] = useState(null);
   const [disabled, setDisabled] = useState(null);
   const [succeeded, setSucceeded] = useState(false);
-  const [processing, setProcessing] = useState("");
+  const [processing, setProcessing] = useState(false);
   const [clientSecret, setClientSecret] = useState(true);
   const history = useHistory();
   useEffect(() => {
@@ -130,7 +130,8 @@ function Payment() {
                   thousandSeparator={true}
                   prefix={"$"}
                 />
-                <button disabled={processing || disabled || succeeded}>
+                {console.log(processing || succeeded || disabled || user === null)}
+                <button disabled={processing || succeeded || disabled || user === null}>
                   <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
                 </button>
               </div>
