@@ -1,13 +1,13 @@
 import firebase from "firebase";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBF9QUSC5yFZbOIXzZwBkDCO17neV1AR-4",
+  apiKey: "", // add your api key
   authDomain: "clone-af859.firebaseapp.com",
   databaseURL: "https://clone-af859.firebaseio.com",
   projectId: "clone-af859",
   storageBucket: "clone-af859.appspot.com",
-  messagingSenderId: "429517327396",
-  appId: "1:429517327396:web:df15d68bfd0e39db64dcb1",
+  messagingSenderId: "", // add your api key
+  appId: "", // add your api key
 };
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
