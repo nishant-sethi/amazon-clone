@@ -6,8 +6,8 @@ const firebaseConfig = {
   databaseURL: "https://clone-af859.firebaseio.com",
   projectId: "clone-af859",
   storageBucket: "clone-af859.appspot.com",
-  messagingSenderId: "", // add your api key
-  appId: "", // add your api key
+  messagingSenderId: "", // add your messagingSenderId 
+  appId: "", // add your appId
 };
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
